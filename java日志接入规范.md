@@ -33,7 +33,8 @@ logback-classic直接引用的slf4j，不需要桥接。
 比如服务serivce1依赖service2, 但是service2使用log4j进行日志打印。 可以参考如下步骤进行改造：  
 **具体用法**：使用log4j-over-slf4j取代log4j，这样log4j接口输出的日志就会通过log4j-over-slf4j路由到SLF4J上，这样即使系统（包含使用的第三方jar库，比如dubbo）都可以将日志最终路由到SLF4J上，进而集中输出。   
 - 操作步骤：   
-1、去除service2 log4j依赖  
+1、去除service2 log4j依赖   
+
 2、在service1添加如下maven依赖，特别是log4j-over-slf4j。
 
 
