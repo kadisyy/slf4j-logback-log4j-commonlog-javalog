@@ -1,6 +1,3 @@
-java日志接入规范
-====
-
 # java日志接入规范
 ## 整体流程
 ![日志框架转换比较](pics/log-compare.png)
@@ -212,7 +209,3 @@ public class AppA {
             "port" => 65051
 }
 ```
-
-## 日志查询结果展示
-可实现筛选、全文检索等基本功能，如下：
-![rt-log](pics/rt-log.PNG)
