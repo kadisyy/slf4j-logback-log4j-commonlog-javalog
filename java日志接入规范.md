@@ -33,10 +33,8 @@ logback-classic直接引用的slf4j，不需要桥接。
 比如服务serivce1依赖service2, 但是service2使用log4j进行日志打印。 可以参考如下步骤进行改造：  
 **具体用法**：使用log4j-over-slf4j取代log4j，这样log4j接口输出的日志就会通过log4j-over-slf4j路由到SLF4J上，这样即使系统（包含使用的第三方jar库，比如dubbo）都可以将日志最终路由到SLF4J上，进而集中输出。   
 - 操作步骤：   
-1、去除service2 log4j依赖   
-
-2、在service1添加如下maven依赖，特别是log4j-over-slf4j。
-
+1、去除service2 log4j依赖    
+2、在service1添加如下maven依赖，特别是log4j-over-slf4j。    
 
 - maven依赖，供参考：
 ```
@@ -69,7 +67,7 @@ logback-classic直接引用的slf4j，不需要桥接。
 如果在原有commons-logging 系统里，如果要迁移到slf4j, 使用slf4j 替换commons-logging ，也是可以做到的。原理使用到了上述commons-logging 加载的第二点。需要引入jcl-over-slf4j。这个jar 包提供了一个桥接，让底层实现是基于slf4j。  
 比如服务serivce1依赖service2, 但是service2使用log4j进行日志打印。
 - 操作步骤：  
-1、去除service2 apache common logging的依赖
+1、去除service2 apache common logging的依赖   
 2、在service1添加如下maven依赖，特别是jcl-over-slf4j
 - maven依赖，供参考：
 ```
