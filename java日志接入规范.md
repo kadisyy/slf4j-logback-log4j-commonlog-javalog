@@ -199,7 +199,7 @@ public class AppA {
      "thread_name" => "main",
      "logger_name" => "LoggerA",
      "level_value" => 20000,
-            "host" => "base1.zetyun.com",
+            "host" => "base1.xxxx.com",
       "@timestamp" => 2018-08-03T06:57:00.974Z,
            "jobId" => "sdhendmnakdhjaebma",
          "message" => "test_logback Hello",
